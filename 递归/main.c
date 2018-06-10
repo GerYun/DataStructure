@@ -8,10 +8,15 @@
 
 #include <stdio.h>
 
+//   <递归的思想：解决n的问题的时候，借助于解决n-1的问题>
+
+
+
+///// 汉诺塔问题
+
 // 先借助于 c 把 a上的 n-1个盘子移动到b上，
 // 再将a上剩下一个盘子直接移动到c
 // 最后 将b上剩下的n-1个盘子 借助于a移到到 c上
-
 
 // 参数a表示的是要移动的柱子
 // 参数b表示被借助的柱子
@@ -31,9 +36,27 @@ void hanoi(int n,char a,char b,char c) {
     }
 }
 
+// 求阶乘
+long factorial(long n) {
+    if (n == 1) {
+        return n;
+    }
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+// 递归求和 1+2+3+4+....n
+long sum(long n) {
+    if (n == 1) {
+        return n;
+    }
+    else {
+        return n + sum(n - 1);
+    }
+}
+
+
 int main(int argc, const char * argv[]) {
-    
-    hanoi(3, 'A', 'B', 'C');
-    
     return 0;
 }

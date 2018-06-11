@@ -36,7 +36,7 @@ void hanoi(int n,char a,char b,char c) {
     }
 }
 
-// 求阶乘
+// 求阶乘 n的 阶乘 等价于 n * (n-1)!
 long factorial(long n) {
     if (n == 1) {
         return n;
